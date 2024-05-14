@@ -7,6 +7,7 @@ import StarsIcon from '@mui/icons-material/Stars';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import { Tooltip } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Home = ({ data }: any) => {
@@ -30,9 +31,11 @@ const Home = ({ data }: any) => {
             <div style={{ width: 500, backgroundColor: 'transparent', color: 'white', display: 'flex', justifyContent: 'center' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-around', gap: '50px' }}>
                     <Tooltip title="Ranking">
+                    <Link to="/ranking" style={{ textDecoration: 'none' }}>
                         <button onClick={() => setValue('ranking')} style={{ backgroundColor: 'transparent', color: 'white' }}>
                             <StarsIcon style={{ fontSize: '40px' }} />
                         </button>
+                    </Link>
                     </Tooltip>
                     <Tooltip title="Conquistas">
                         <button onClick={() => setValue('conquistas')} style={{ backgroundColor: 'transparent', color: 'white' }}>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Papa, { ParseResult } from 'papaparse';
 import Home from './components/home/Home';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Importe o BrowserRouter
+import Ranking from './components/ranking/Ranking';
 
 interface MyData {
   coluna1: string;
@@ -45,7 +46,12 @@ const App = () => {
 
   return (
     <>
-      <Home data={data.length > 0 ? [data[0]] : []} />
+      <BrowserRouter> {/* Envolve as rotas no BrowserRouter */}
+        <Routes>
+          <Route path="/" element={<Home data={data.length > 0 ? [data[0]] : []} />} />
+          <Route path="/ranking" element={<Ranking data={data} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
