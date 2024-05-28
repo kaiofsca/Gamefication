@@ -7,4 +7,6 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #121212; /* Assuming a dark theme background */
+    color: white; /* Ensures text is white for visibility on dark background */
 `;
