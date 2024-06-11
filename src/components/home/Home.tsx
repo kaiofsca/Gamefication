@@ -40,14 +40,18 @@ const Home = ({ data }: any) => {
                         </Link>
                     </Tooltip>
                     <Tooltip title="Conquistas">
-                        <button onClick={() => setValue('conquistas')} style={{ backgroundColor: 'transparent', color: 'white' }}>
-                            <MilitaryTechIcon style={{ fontSize: '40px' }} />
-                        </button>
+                        <Link to="/awards" style={{ textDecoration: 'none' }}>
+                            <button onClick={() => setValue('conquistas')} style={{ backgroundColor: 'transparent', color: 'white' }}>
+                                <MilitaryTechIcon style={{ fontSize: '40px' }} />
+                            </button>
+                        </Link>
                     </Tooltip>
                     <Tooltip title="Loja">
-                        <button onClick={() => setValue('loja')} style={{ backgroundColor: 'transparent', color: 'white' }}>
-                            <LocalGroceryStoreIcon style={{ fontSize: '40px' }} />
-                        </button>
+                        <Link to="/store" style={{ textDecoration: 'none' }}>
+                            <button onClick={() => setValue('loja')} style={{ backgroundColor: 'transparent', color: 'white' }}>
+                                <LocalGroceryStoreIcon style={{ fontSize: '40px' }} />
+                            </button>
+                        </Link>
                     </Tooltip>
                 </div>
             </div>

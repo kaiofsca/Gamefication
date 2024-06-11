@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 100%;
     height: 100vh;
     display: flex;
@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     background-color: #121212;
     color: white;
+    padding: 20px;
 `;
 
 export const Header = styled.div`
@@ -34,9 +35,35 @@ export const FilterButton = styled.button`
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+    
     &:hover {
         background-color: #484fa4;
     }
+
+    &.selected {
+        background-color: #430c83; /* Cor de fundo para o botão selecionado */
+        border: 1px solid #430c83; /* Borda para o botão selecionado */
+    }
+`;
+
+export const ListContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    overflow-y: auto; /* Permitir rolagem vertical */
+`;
+
+export const List = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Card = styled.li<{ rank: number }>`
@@ -48,7 +75,6 @@ export const Card = styled.li<{ rank: number }>`
     padding: 15px;
     margin: 10px 0;
     border-radius: 10px;
-    /* background-color: ${({ rank }) => rank === 1 ? '#e6d752' : rank === 2 ? '#5a65c7' : rank === 3 ? '#b87333' : '#333'}; */
     border: 1px solid ${({ rank }) => rank === 1 ? '#e6d752' : rank === 2 ? '#5a65c7' : rank === 3 ? '#b87333' : '#444'};
     color: black;
 
@@ -71,3 +97,4 @@ export const Card = styled.li<{ rank: number }>`
         color: #FFF;
     }
 `;
+
