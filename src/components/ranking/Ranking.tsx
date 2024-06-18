@@ -65,9 +65,11 @@ const Ranking = ({ data }: any) => {
                     <List>
                         {filteredData.map((item: any, index: number) => (
                             <Card key={index} rank={index + 1}>
-                                <span>{index + 1}</span>
-                                <p>{item.nmAbreviado}</p>
-                                {/* <p>{item.nuExperiencia}</p> */}
+                                <div style={{display: 'flex'}}>
+                                    <span>{index + 1}</span>
+                                    <p>{item.nmAbreviado}</p>
+                                </div>
+                                <p style={{textAlign: 'end'}}>{item.nuExperiencia}</p>
                             </Card>
                         ))}
                     </List>

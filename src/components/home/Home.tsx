@@ -26,8 +26,8 @@ const Home = ({ data }: any) => {
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', position: 'relative'}}>
                 <h2 style={{textAlign: 'center'}}>Olá, <span style={{color: '#c2a5d6'}}>{data[0]?.nmAbreviado}!</span></h2>
                 <div style={{fontSize: '24px', position: 'absolute', right: '40px', top: '90px'}}>{data[0]?.nuNivel}</div>
-                <img style={{borderRadius: '50%', width: '350px'}} src={data[0]?.profileImage || imgPerfil} alt="Perfil" />
-                <div style={{color: '#fff', fontSize: '18px', width: '350px', textAlign: 'center', marginTop: '15px'}}>{data[0]?.nmCurso}</div>
+                <img style={{borderRadius: '50%', width: '300px'}} src={data[0]?.profileImage || imgPerfil} alt="Perfil" />
+                <div style={{color: '#fff', fontSize: '18px', width: '350px', textAlign: 'center', marginTop: '15px', fontWeight: 'bold'}}>{data[0]?.nmCurso}</div>
             </div>
 
             <div style={{ width: '400px', backgroundColor: '#393939', color: 'white', display: 'flex', justifyContent: 'center', borderRadius: '50px' }}>

@@ -8,6 +8,7 @@ import ImgAlunoExemplar from "./assets/recorde.png";
 import ImgAlunoPresente from "./assets/estrelas.png";
 import ImgAlunoInformado from "./assets/joia.png";
 import ImgAlunoSociavel from "./assets/sociavel.png";
+import ImgStore from "./assets/presente.png";
 import Store from './components/store/Store';
 
 interface MyData {
@@ -57,9 +58,22 @@ const App = () => {
 
 const dataStore = [
   {
-      image: "",
-      title: "Voucher",
-      description: "",
+    image: ImgStore,
+    title: "Voucher",
+    description: "Voucher de 5% no Suco e Tal",
+    points: "1000"
+  },
+  {
+    image: ImgStore,
+    title: "Voucher",
+    description: "Voucher de 5% no Suco e Tal",
+    points: "1000"
+  },
+  {
+    image: ImgStore,
+    title: "Voucher",
+    description: "Voucher de 5% no Suco e Tal",
+    points: "1000"
   },
 ];
 
